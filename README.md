@@ -1,97 +1,208 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# 🎬 React Native Movie Explorer App
 
-# Getting Started
+A cross-platform mobile application built with **React Native** for a hiring challenge. This app interacts with the **TMDb API** to display a list of popular movies and detailed information for each. It supports both **Android** and **iOS** platforms.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+* * *
 
-## Step 1: Start Metro
+## 🚀 Features
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+* *   🔍 Browse popular movies
+*     
+* *   📄 View detailed movie information
+*     
+* *   🧭 Smooth navigation between screens
+*     
+* *   ⚠️ API error handling and loading states
+*     
+* *   🧠 State management using **Context API** and **Redux Toolkit**
+*     
+* *   🎨 Clean and responsive UI with system-adaptive light/dark mode using useColorScheme
+*     
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+* * *
 
-```sh
-# Using npm
+## 📱 Screens
+
+### 🔹 MovieListScreen
+
+* *   Displays a list of movies fetched from the TMDb API.
+*     
+* *   Clickable movie cards navigate to the detail screen.
+*     
+
+### 🔹 MovieDetailScreen
+
+* *   Shows movie **title**, **overview**, **release date**, **rating**, and **poster** image.
+*     
+
+* * *
+
+## 🧩 Dependencies
+
+```json
+{
+  "@react-native-masked-view/masked-view": "^0.3.2",
+  "@react-navigation/native": "^7.1.8",
+  "@react-navigation/stack": "^7.3.1",
+  "@reduxjs/toolkit": "^2.8.1",
+  "axios": "^1.9.0",
+  "react": "19.0.0",
+  "react-native": "0.79.2",
+  "react-native-dotenv": "^3.4.11",
+  "react-native-gesture-handler": "^2.25.0",
+  "react-native-reanimated": "^3.17.5",
+  "react-native-safe-area-context": "^5.4.0",
+  "react-native-screens": "^4.10.0",
+  "react-native-vector-icons": "^10.2.0",
+  "react-redux": "^9.2.0",
+  "redux": "^5.0.1"
+}
+```
+
+* * *
+
+## 🛠 Getting Started
+
+> **Note:** Ensure you have completed React Native's environment setup guide before proceeding.
+
+### Step 1: Clone the Repository
+
+```bash
+git clone <repository-url>
+cd movie-explorer
+```
+
+### Step 2: Install Dependencies
+
+```bash
+npm install
+# OR
+yarn
+```
+
+### Step 3: Set Up Environment Variables
+
+1. 1.  Create a .env file in the root directory.
+1.     
+1. 2.  Add the following to store the TMDb API key and API details:
+1.     
+
+```env
+API_KEY=your_tmdb_api_key
+SECURE_TOKEN=your_secure_token
+```
+
+> These keys are used to authenticate requests to the TMDb API securely via the app's API configuration.
+
+### Step 4: Start Metro
+
+```bash
 npm start
-
-# OR using Yarn
+# OR
 yarn start
 ```
 
-## Step 2: Build and run your app
+### Step 5: Build and Run Your App
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+#### Android
 
-### Android
-
-```sh
-# Using npm
+```bash
 npm run android
-
-# OR using Yarn
+# OR
 yarn android
 ```
 
-### iOS
+#### iOS
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+1. 1.  Install CocoaPods (if not already installed):
+1.     
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
+```bash
 bundle install
 ```
 
-Then, and every time you update your native dependencies, run:
+1. 2.  Install iOS dependencies:
+1.     
 
-```sh
-bundle exec pod install
+```bash
+cd ios && bundle exec pod install && cd ..
 ```
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+1. 3.  Run the iOS app:
+1.     
 
-```sh
-# Using npm
+```bash
 npm run ios
-
-# OR using Yarn
+# OR
 yarn ios
 ```
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+* * *
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+## 📂 Project Structure
 
-## Step 3: Modify your app
+```
+src/
+│
+├── components/        # Reusable UI components (e.g., MovieCard, SkeletonLoader)
+├── screens/           # App screens (MovieListScreen, MovieDetailScreen)
+├── context/           # Context API setup (uses useColorScheme for system theme)
+├── store/             # Redux slices and store configuration
+├── hooks/             # Custom hooks (e.g., useFetchMovies)
+├── styles/            # Common style definitions
+└── utils/             # Utility functions and navigation helpers
+```
 
-Now that you have successfully run the app, let's make changes!
+> The context/ directory leverages the Context API with useColorScheme to dynamically adapt the app's theme based on the device's system light/dark mode settings.
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+* * *
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+## ✅ Task Completion
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+* *   Integrated TMDb API to fetch and display movie data
+*     
+* *   Built responsive movie listing and detail screens
+*     
+* *   Implemented loading states and error handling
+*     
+* *   Used both Context API and Redux Toolkit for state management
+*     
+* *   Supports both Android and iOS
+*     
+* *   Included light/dark mode using system preference
+*     
 
-## Congratulations! :tada:
+* * *
 
-You've successfully run and modified your React Native App. :partying_face:
+## 👏 Congratulations!
 
-### Now what?
+You've successfully set up and run the **React Native Movie Explorer App** 🎉  
+Now you can start customizing, expanding features, or integrating it into a larger application!
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
+* * *
 
-# Troubleshooting
+## 🧰 Troubleshooting
 
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+* *   For reload:
+*     
+*     * *   **Android**: Press R twice or open Dev Menu (Ctrl + M / Cmd + M)
+*     *     
+*     * *   **iOS**: Press R in Simulator or use Dev Menu (Cmd + D)
+*     *     
+* *   Refer to the Troubleshooting Guide for common issues.
+*     
 
-# Learn More
+* * *
 
-To learn more about React Native, take a look at the following resources:
+## 📚 Learn More
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+* *   React Native Docs
+*     
+* *   React Navigation Docs
+*     
+* *   Redux Toolkit Docs
+*     
+* *   TMDb API Documentation
+*     
+
+* * *
