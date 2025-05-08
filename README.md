@@ -6,18 +6,18 @@ A cross-platform mobile application built with **React Native** for a hiring cha
 
 ## 🚀 Features
 
-* *   🔍 Browse popular movies
-*     
-* *   📄 View detailed movie information
-*     
-* *   🧭 Smooth navigation between screens
-*     
-* *   ⚠️ API error handling and loading states
-*     
-* *   🧠 State management using **Context API** and **Redux Toolkit**
-*     
-* *   🎨 Clean and responsive UI with system-adaptive light/dark mode using useColorScheme
-*     
+ *   🔍 Browse popular movies
+      
+ *   📄 View detailed movie information
+     
+ *   🧭 Smooth navigation between screens
+       
+ *   ⚠️ API error handling and loading states
+      
+ *   🧠 State management using **Context API** and **Redux Toolkit**
+     
+ *   🎨 Clean and responsive UI with system-adaptive light/dark mode using useColorScheme
+   
 
 * * *
 
