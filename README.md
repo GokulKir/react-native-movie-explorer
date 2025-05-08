@@ -25,10 +25,10 @@ A cross-platform mobile application built with **React Native** for a hiring cha
 
 ### 🔹 MovieListScreen
 
-* *   Displays a list of movies fetched from the TMDb API.
-*     
-* *   Clickable movie cards navigate to the detail screen.
-*     
+*   Displays a list of movies fetched from the TMDb API.
+     
+*   Clickable movie cards navigate to the detail screen.
+      
 
 ### 🔹 MovieDetailScreen
 
@@ -82,10 +82,10 @@ yarn
 
 ### Step 3: Set Up Environment Variables
 
-1. 1.  Create a .env file in the root directory.
-1.     
-1. 2.  Add the following to store the TMDb API key and API details:
-1.     
+1.  Create a .env file in the root directory.
+       
+2.  Add the following to store the TMDb API key and API details:
+     
 
 ```env
 API_KEY=your_tmdb_api_key
@@ -159,18 +159,18 @@ src/
 
 ## ✅ Task Completion
 
-* *   Integrated TMDb API to fetch and display movie data
-*     
-* *   Built responsive movie listing and detail screens
-*     
-* *   Implemented loading states and error handling
-*     
-* *   Used both Context API and Redux Toolkit for state management
-*     
-* *   Supports both Android and iOS
-*     
-* *   Included light/dark mode using system preference
-*     
+ *   Integrated TMDb API to fetch and display movie data
+      
+ *   Built responsive movie listing and detail screens
+      
+ *   Implemented loading states and error handling
+    
+ *   Used both Context API and Redux Toolkit for state management
+     
+ *   Supports both Android and iOS
+     
+ *   Included light/dark mode using system preference
+      
 
 * * *
 
@@ -190,19 +190,15 @@ Now you can start customizing, expanding features, or integrating it into a larg
 *     * *   **iOS**: Press R in Simulator or use Dev Menu (Cmd + D)
 *     *     
 * *   Refer to the Troubleshooting Guide for common issues.
-*     
 
-* * *
 
 ## 📚 Learn More
 
-* *   React Native Docs
-*     
-* *   React Navigation Docs
-*     
-* *   Redux Toolkit Docs
-*     
-* *   TMDb API Documentation
-*     
+*  React Native Docs
+     
+*  React Navigation Docs
+      
+*  Redux Toolkit Docs
+    
+*  TMDb API Documentation
 
-* * *
